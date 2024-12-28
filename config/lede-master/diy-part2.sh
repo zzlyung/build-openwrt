@@ -28,16 +28,14 @@ echo "DISTRIB_SOURCECODE='lede'" >>package/base-files/files/etc/openwrt_release
 
 # ------------------------------- Other started -------------------------------
 # Add a feed source
-echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
-echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
+echo 'src-git store https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-store' >>feeds.conf.default
+echo 'src-git ssr-plus https://github.com/kenzok8/small/tree/master/luci-app-ssr-plus' >>feeds.conf.default
+echo 'src-git passwall https://github.com/kenzok8/small/tree/master/luci-app-passwall' >>feeds.conf.default
+echo 'src-git openclash https://github.com/kenzok8/small/tree/master/luci-app-openclash' >>feeds.conf.default
+echo 'src-git homeproxy https://github.com/kenzok8/small/tree/master/luci-app-homeproxy' >>feeds.conf.default
 
 # Add luci-app-amlogic
 #svn co https://github.com/ophub/luci-app-amlogic package/luci-app-amlogic
-svn co https://github.com/kenzok8/small/tree/master/luci-app-ssr-plus package/luci-app-ssr-plus
-svn co https://github.com/kenzok8/small/tree/master/luci-app-passwall package/luci-app-passwall
-svn co https://github.com/kenzok8/small/tree/master/luci-app-openclash package/luci-app-openclash
-svn co https://github.com/kenzok8/small/tree/master/luci-app-homeproxy package/luci-app-homeproxy
-svn co https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-store package/luci-app-store
 
 # Fix runc version error
 # rm -rf ./feeds/packages/utils/runc/Makefile
