@@ -33,11 +33,11 @@ echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 
 # Add luci-app-amlogic
 #svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
-svn co https://github.com/kenzok8/small/tree/master/luci-app-ssr-plus luci-app-ssr-plus
-svn co https://github.com/kenzok8/small/tree/master/luci-app-passwall luci-app-passwall
-svn co https://github.com/kenzok8/small/tree/master/luci-app-openclash luci-app-openclash
-svn co https://github.com/kenzok8/small/tree/master/luci-app-homeproxy luci-app-homeproxy
-svn co https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-store luci-app-store
+svn co https://github.com/kenzok8/small/tree/master/luci-app-ssr-plus package/luci-app-ssr-plus
+svn co https://github.com/kenzok8/small/tree/master/luci-app-passwall package/luci-app-passwall
+svn co https://github.com/kenzok8/small/tree/master/luci-app-openclash package/luci-app-openclash
+svn co https://github.com/kenzok8/small/tree/master/luci-app-homeproxy package/luci-app-homeproxy
+svn co https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-store package/luci-app-store
 
 # Fix runc version error
 # rm -rf ./feeds/packages/utils/runc/Makefile
